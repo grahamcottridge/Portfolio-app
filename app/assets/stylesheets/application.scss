@@ -213,7 +213,7 @@ h6, .h6 {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), image-url('desk2.jpg') no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), image-url('desk2.jpg') no-repeat;
   background-size: cover;
 }
 
