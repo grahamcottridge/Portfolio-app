@@ -1,3 +1,5 @@
+ruby '2.4.0'
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -46,3 +48,5 @@ gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'mini_magick', '~> 4.8'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
+
+
