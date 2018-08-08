@@ -9,6 +9,12 @@
       <hr>
 
       <strong><%= @portfolio_item.subtitle %></strong>
+      <br>
+
+      <% if @portfolio_item.website.nil? %>
+      <% else %>
+      <strong>Website: <%= link_to @portfolio_item.title, @portfolio_item.website %></strong>
+      <% end %>
 
       <p><%= @portfolio_item.body %></p>
 
