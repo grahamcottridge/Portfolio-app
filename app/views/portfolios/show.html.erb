@@ -13,7 +13,7 @@
 
       <% if @portfolio_item.website.nil? %>
       <% else %>
-      <strong>Website: <%= link_to @portfolio_item.title, @portfolio_item.website %></strong>
+      <strong>Website: <%= link_to @portfolio_item.title, @portfolio_item.website, target: :_blank %></strong>
       <% end %>
 
       <p><%= @portfolio_item.body %></p>
