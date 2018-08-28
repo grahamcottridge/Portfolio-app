@@ -8,23 +8,28 @@
 
       <hr>
 
-      <% if @portfolio_item.website.nil? || @portfolio_item.website.empty? %>
-        <strong></strong>
-      <% else %>
-        <strong>Website: <%= link_to @portfolio_item.title, @portfolio_item.website %> </strong>
-      <% end %>
-
       <p><%= @portfolio_item.body %></p>
 
       <hr>
 
-      <h5>Technologies used:</h5>
+      <% if @portfolio_item.website.nil? || @portfolio_item.website.empty? %>
+        <strong></strong>
+      <% else %>
+        <strong>website_demo: <%= link_to @portfolio_item.title, @portfolio_item.website %></strong>
+        <br>
+      <% end %>
+
+      <strong>code_repo: <%= link_to "GitHub", @portfolio_item.github %> </strong>
+
+      <hr>
+
+      <h5><strong>Technologies used:</strong></h5>
       <% @portfolio_item.technologies.each do |t| %>
-      <p><%= t.name %></p>
+      <p class="line-space"><%= t.name %></p>
       <% end %>
 
       <% if logged_in?(:site_admin) %>
-      <div class="">
+      <div>
         <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
       </div>
       <% end %>
