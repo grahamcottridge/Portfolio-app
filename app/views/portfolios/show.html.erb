@@ -15,17 +15,21 @@
       <% if @portfolio_item.website.nil? || @portfolio_item.website.empty? %>
         <strong></strong>
       <% else %>
-        <strong>website_demo: <%= link_to @portfolio_item.title, @portfolio_item.website %></strong>
+        <strong>website_demo: <%= link_to @portfolio_item.title, @portfolio_item.website, target: :_blank %></strong>
         <br>
       <% end %>
 
-      <strong>code_repo: <%= link_to "GitHub", @portfolio_item.github %> </strong>
+      <strong>code_repo: <%= link_to "GitHub", @portfolio_item.github, target: :_blank %> </strong>
 
       <hr>
 
-      <h5><strong>Technologies used:</strong></h5>
+      <h6><strong>Technologies used:</strong></h6>
       <% @portfolio_item.technologies.each do |t| %>
-      <p class="line-space"><%= t.name %></p>
+      <!-- <p class="line-space"><%= t.name %></p> -->
+      <ul class="padding-left">
+        <li class="line-space padding-left"><%= t.name %>
+      </ul>
+
       <% end %>
 
       <% if logged_in?(:site_admin) %>
