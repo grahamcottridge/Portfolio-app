@@ -66,6 +66,7 @@ private
                                       :main_image,
                                       :thumb_image,
                                       :website,
+                                      :github,
                                       technologies_attributes: [:id, :name, :_destroy]
                                       )
   end
